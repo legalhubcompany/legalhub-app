@@ -6,6 +6,11 @@
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
 
+
+export const yellowBrand = '#ffde3a';
+export const greenBrand = '#51b28d';
+export const blackBrand = '#191817';
+
 export const Colors = {
   light: {
     text: '#11181C',
