@@ -8,6 +8,8 @@ const tintColorDark = '#fff';
 
 
 export const yellowBrand = '#ffde3a';
+export const blueBrand = '#0D4D9C';
+export const goldBrand = '#FC9E1C';
 export const greenBrand = '#51b28d';
 export const blackBrand = '#191817';
 
