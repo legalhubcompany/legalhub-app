@@ -19,29 +19,12 @@ export default function Login() {
 
   return (
     <View style={styles.container}>
-      <Image
-        source={require("@/assets/images/login.png")}
-        style={styles.image}
-        resizeMode="contain"
-      />
+      <Image source={require("@/assets/images/login.png")} style={styles.image} resizeMode="contain" />
       <Text style={styles.title}>Legalhub</Text>
       <Text style={styles.subtitle}>"Tenang, sekarang biarkan ribuan Lawyer kami yang bantu masalahnya."</Text>
 
-      <TextInput
-        placeholder="Email"
-        style={styles.input}
-        keyboardType="email-address"
-        autoCapitalize="none"
-        value={email}
-        onChangeText={setEmail}
-      />
-      <TextInput
-        placeholder="Password"
-        style={styles.input}
-        secureTextEntry
-        value={password}
-        onChangeText={setPassword}
-      />
+      <TextInput placeholder="Email" style={styles.input} keyboardType="email-address" autoCapitalize="none" value={email} onChangeText={setEmail} />
+      <TextInput placeholder="Password" style={styles.input} secureTextEntry value={password} onChangeText={setPassword} />
 
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Login</Text>
@@ -49,7 +32,9 @@ export default function Login() {
 
       <Text style={styles.footer}>
         Belum punya akun?{" "}
-        <Link href="/register" style={styles.link}>Daftar di sini</Link>
+        <Link href="/register" style={styles.link}>
+          Daftar di sini
+        </Link>
       </Text>
     </View>
   );
@@ -57,7 +42,11 @@ export default function Login() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, backgroundColor: "#fff", alignItems: "center", justifyContent: "center", padding: 20
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 20,
   },
   image: {
     width: 250,
@@ -66,14 +55,14 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 4
+    marginBottom: 4,
   },
   subtitle: {
     fontSize: 14,
     color: "#666",
     marginBottom: 20,
     textAlign: "center",
-    fontStyle: 'italic'
+    fontStyle: "italic",
   },
   input: {
     width: "100%",
@@ -81,7 +70,7 @@ const styles = StyleSheet.create({
     borderColor: "#ddd",
     borderWidth: 1,
     borderRadius: 8,
-    marginBottom: 12
+    marginBottom: 12,
   },
   button: {
     width: "100%",
@@ -89,17 +78,18 @@ const styles = StyleSheet.create({
     padding: 14,
     borderRadius: 8,
     alignItems: "center",
-    marginBottom: 20
+    marginBottom: 20,
   },
   buttonText: {
-    color: blackBrand, fontWeight: "bold"
+    color: blackBrand,
+    fontWeight: "bold",
   },
   footer: {
     fontSize: 14,
-    color: "#444"
+    color: "#444",
   },
   link: {
     color: greenBrand,
-    fontWeight: "bold"
-  }
+    fontWeight: "bold",
+  },
 });

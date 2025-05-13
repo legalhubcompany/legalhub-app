@@ -17,9 +17,9 @@ export default function SplashScreen() {
 
       if (!isLoading) {
         if (user) {
-          router.replace("../(tabs)/home");
+          router.replace("../(tabs)/Home");
         } else {
-          router.replace("../(auth)/lending");
+          router.replace("../(tabs)/Home");
         }
       }
     }, 1500); // Memberikan delay sedikit lebih lama

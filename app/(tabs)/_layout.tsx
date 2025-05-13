@@ -15,21 +15,17 @@ export default function TabsLayout() {
 
   if (isLoading) return null;
 
-  const renderTabBarIcon = useCallback((props: {
-    color: string;
-    size: number;
-    name: 'home' | 'transaction' | 'profile' | 'notification';
-  }) => {
+  const renderTabBarIcon = useCallback((props: { color: string; size: number; name: "Home" | "Riwayat" | "Artikel" | "Akun" }) => {
     const { color, size, name } = props;
-    
+
     switch (name) {
-      case 'home':
+      case "Home":
         return <MaterialCommunityIcons name="home-variant-outline" size={size} color={color} />;
-      case 'transaction':
+      case "Riwayat":
         return <Ionicons name="card-outline" size={size} color={color} />;
-      case 'notification':
+      case "Artikel":
         return <Ionicons name="notifications-outline" size={size} color={color} />;
-      case 'profile':
+      case "Akun":
         return <Ionicons name="person-outline" size={size} color={color} />;
       default:
         return null;
@@ -38,10 +34,10 @@ export default function TabsLayout() {
 
   return (
     <Tabs screenOptions={{ headerShown: false }}>
-      <Tabs.Screen name="home" options={{ title: "Home", tabBarIcon: ({ color, size }) => renderTabBarIcon({ color, size, name: 'home' }), }} />
-      <Tabs.Screen name="transaction" options={{ title: "Transaction", tabBarIcon: ({ color, size }) => renderTabBarIcon({ color, size, name: 'transaction' }) }} />
-      <Tabs.Screen name="notification" options={{ title: "Notification", tabBarIcon: ({ color, size }) => renderTabBarIcon({ color, size, name: 'notification' }) }} />
-      <Tabs.Screen name="profile" options={{ title: "Profile", tabBarIcon: ({ color, size }) => renderTabBarIcon({ color, size, name: 'profile' }) }} />
+      <Tabs.Screen name="Home" options={{ title: "Home", tabBarIcon: ({ color, size }) => renderTabBarIcon({ color, size, name: "Home" }) }} />
+      <Tabs.Screen name="Riwayat" options={{ title: "Riwayat", tabBarIcon: ({ color, size }) => renderTabBarIcon({ color, size, name: "Riwayat" }) }} />
+      <Tabs.Screen name="Artikel" options={{ title: "Artikel", tabBarIcon: ({ color, size }) => renderTabBarIcon({ color, size, name: "Artikel" }) }} />
+      <Tabs.Screen name="Akun" options={{ title: "Akun", tabBarIcon: ({ color, size }) => renderTabBarIcon({ color, size, name: "Akun" }) }} />
     </Tabs>
   );
 }
